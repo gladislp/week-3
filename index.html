@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <title>Simple Landing Page</title>
+
+    <style>
+    :root {
+    /* Background & Base */
+    --color-bg-dark: #1e2a23;         /* Dominan gelap untuk latar */
+    --color-bg-light: #e8e6df;        /* Warna terang netral untuk bagian terang */
+    --color-section-bg: #2e3a33;      /* Warna background section seperti "About" */
+    --color-overlay-dark: rgba(0, 0, 0, 0.6); /* Overlay gelap untuk teks di atas gambar */
+
+    /* Primary / Accent */
+    --color-primary: #708c7b;         /* Hijau-abu natural (untuk tombol utama, icon) */
+    --color-secondary: #b8aa7d;       /* Warna emas kusam untuk elemen dekoratif */
+    --color-accent-soft: #d6cba3;     /* Aksen lembut untuk hiasan/tulisan tipis */
+
+    /* Text */
+    --color-text-main: #ffffff;       /* Untuk teks di atas gambar */
+    --color-text-dark: #2f322e;       /* Teks di latar terang */
+    --color-text-muted: #8d8f88;      /* Teks sekunder / keterangan */
+    --color-link-hover: #d4c488;      /* Warna saat hover link */
+
+    /* Buttons */
+    --color-btn-bg: #4f6357;          /* Background tombol */
+    --color-btn-hover: #6e8a76;       /* Hover tombol */
+    --color-btn-text: #ffffff;        /* Teks tombol */
+
+    /* Borders & Dividers */
+    --color-border: #7c7f75;
+    --color-divider: #3a3e39;
+
+    /* Misc */
+    --color-success: #98b98e;
+    --color-warning: #e6c177;
+    }
+
+    </style>
+</head>
+
+<body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: var(--color-section-bg);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="" style="color: var(--color-accent-soft);">Suar Bumi</a>
+        <button class="navbar-toogler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav">
+        <span class="navbar-toogler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarnav">
+        <ul class="navbar-nav ms-auto">
+            <li class="navbar-item"> <a class="nav-link" href="#beranda" style="color: var(--color-accent-soft);">Home</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="#tentang" style="color: var(--color-accent-soft);">About</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="#top" style="color: var(--color-accent-soft);">Top</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="#words" style="color: var(--color-accent-soft);">Words</a></li>
+            <li class="navbar-item"> <a class="nav-link" href="#galeri" style="color: var(--color-accent-soft);">Gallery</a></li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!-- HERO VIDEO FIX -->
+    <section id="beranda" style="position: relative; height: 90vh; overflow: hidden;">
+    <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0; z-index: -1;">
+        <source src="https://videos.pexels.com/video-files/4763873/4763873-uhd_2560_1440_24fps.mp4" type="video/mp4">
+        Browsermu tidak mendukung video tag.
+    </video>
+
+    <div style="background-color: var(--color-overlay-dark); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <div class="container-fluid text-center text-white">
+        <h1 class="fw-bold" style="font-size: 3rem; color: var(--color-warning);">Jelajahi Dunia Bersamaku</h1>
+        <p class="fs-4" style="max-width: 700px; margin: 20px auto; font-size: 1.25rem;">
+            Temukan cerita seru, tempat tersembunyi, dan pengalaman tak terlupakan dari setiap sudut dunia. Melangkahlah bersama saya menjelajahi keindahan alam dan budaya!
+        </p>
+        <a href="#walk">
+        <button class="btn btn-lg" style="background-color: var(--color-btn-bg); color: var(--color-btn-text); border: none; padding: 12px 30px; font-size: 1rem;">
+            Jelajahi!
+        </button>
+        </a>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- TENTANG -->
+    <section id="tentang" class="py-5">
+    <div class="container text-center">
+        <!-- Kalimat pengantar -->
+        <h2 class="fw-bold mb-4">Menyusuri Keindahan Dunia</h2>
+        <p class="lead mb-5 px-3">
+        Dunia ini menyimpan banyak keajaiban—dari pegunungan yang menjulang hingga pantai-pantai tersembunyi yang memukau. 
+        Sebelum kita memasuki daftar tempat terbaik versi kami, mari sejenak menikmati beberapa cuplikan visual 
+        yang akan membawa imajinasi kamu mengembara ke berbagai penjuru bumi. Rasakan ketenangan dan keindahan dari setiap sudut pandang yang kami sajikan di bawah ini.
+        </p>
+        <!-- Carousel dengan ukuran dan radius inline -->
+        <div class="mx-auto" style="max-width: 640px;">
+        <div id="carouselPreview" class="carousel slide" data-bs-ride="carousel"
+            style="height: 280px; border-radius: 2rem; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/2468773/pexels-photo-2468773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100"
+                    style="height: 100%; object-fit: cover; border-radius: 2rem;" alt="Pemandangan 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/5567939/pexels-photo-5567939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100"
+                    style="height: 100%; object-fit: cover; border-radius: 2rem;" alt="Pemandangan 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/14693139/pexels-photo-14693139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100"
+                    style="height: 100%; object-fit: cover; border-radius: 2rem;" alt="Pemandangan 3">
+            </div>
+            </div>
+            <!-- NAVIGASI -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselPreview"
+                    data-bs-slide="prev"
+                    style="filter: brightness(1); transition: 0.3s ease;"
+                    onmouseover="this.style.filter='brightness(1.2)'; this.style.opacity='0.9';"
+                    onmouseout="this.style.filter='brightness(1)'; this.style.opacity='1';">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselPreview"
+                    data-bs-slide="next"
+                    style="filter: brightness(1); transition: 0.3s ease;"
+                    onmouseover="this.style.filter='brightness(1.2)'; this.style.opacity='0.9';"
+                    onmouseout="this.style.filter='brightness(1)'; this.style.opacity='1';">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- TULISAN BERJALAN -->
+    <section id="walk" style="overflow: hidden; white-space: nowrap; position: relative; height: 50px; margin-top: 30px;">
+    <div style="
+        display: inline-block;
+        position: absolute;
+        will-change: transform;
+        animation: marquee 15s linear infinite;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--color-warning);
+        letter-spacing: 2px;
+    ">
+        EXPLORE THE WORLD • EXPLORE THE WORLD • EXPLORE THE WORLD • EXPLORE THE WORLD
+    </div>
+</section>
+    <!-- Animasi keyframes -->
+    <style>
+    @keyframes marquee {
+        0%   { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    </style>
+
+
+    <!-- CARD FIX-->
+    <section id="top" class="container my-5">
+    <!-- <h2 class="fw-bold text-center" style="color: var(--color-text-dark);">Most Beautiful Place!</h2> -->
+    <div class="row g-4 mt-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-200 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/3417669/pexels-photo-3417669.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Taman</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Jalan setapak tenang di taman hutan alami, dikelilingi pepohonan tinggi dan aliran air jernih, sejuk dan damai.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding:1.51rem;">
+            <img src="https://images.pexels.com/photos/27947714/pexels-photo-27947714/free-photo-of-bunga-bunga-kembang-taman-kebun.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Kebun Raya</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Taman bunga berwarna-warni dengan susunan rapi dan nuansa cerah, dipenuhi berbagai jenis bunga bermekaran.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/11750458/pexels-photo-11750458.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Kastil Antik</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Padang rumput luas dengan latar kastil klasik di kejauhan, dikelilingi pepohonan dan cahaya sore yang hangat.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/6514452/pexels-photo-6514452.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Palm House</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Bangunan rumah kaca besar dengan arsitektur elegan, dikelilingi taman hijau dan jalur setapak yang tertata rapi.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/31523855/pexels-photo-31523855.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Taman Kastil</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Taman kastil yang luas dan tertata simetris, dikelilingi bangunan megah bergaya klasik, menciptakan suasana dongeng.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/30626318/pexels-photo-30626318/free-photo-of-bawaan.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Gunung</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Pemandangan gunung diselimuti kabut, terkesan agung, dingin, dan menenangkan.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/18558643/pexels-photo-18558643/free-photo-of-tengara-penunjuk-penanda-tonggak-batas.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Tengara</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Jam kota klasik sebagai tengara, berdiri di tengah ruang publik yang tenang menghadirkan nuansa nostalgic.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow" style="overflow: hidden; background-color: var(--color-section-bg); border-radius: 1.5rem;">
+            <div style="padding: 1.5rem;">
+            <img src="https://images.pexels.com/photos/31869325/pexels-photo-31869325/free-photo-of-pemandangan-katedral-gotik-di-jalan-barcelona.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                class="card-img-top" 
+                style="height: 200px; object-fit: cover; border-radius: 0.5rem;" 
+                alt="Tempat A">
+            </div>
+            <div class="card-body">
+            <h4 class="card-title" style="color: var(--color-btn-text);">Katedral dan Jalanan</h4>
+            <p class="card-text" style="color: var(--color-text-muted);">Jalan kota kecil dengan katedral bergaya gotik di kejauhan, dikelilingi bangunan khas Eropa — menciptakan suasana romantis, klasik, dan hangat.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+    <!-- TIPOGRAFI -->
+    <section id="words" style="background-color: var(--color-section-bg); color: var(--color-text-main); padding: 40px 20px; width: 100vw; box-sizing: border-box;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px;">
+        <div style="flex: 1; padding: 0 10px; text-align: center;">
+        <h3 style="color: var(--color-secondary); margin-bottom: 10px;">Bumi</h3>
+        <p style="color: var(--color-accent-soft); line-height: 1.5;">
+            Bumi adalah rumah bagi semua makhluk hidup, tempat di mana ekosistem saling terhubung dan berkembang.
+        </p>
+        </div>
+        <div style="flex: 1; padding: 0 10px; text-align: center;">
+        <h3 style="color: var(--color-secondary); margin-bottom: 10px;">Alam</h3>
+        <p style="color: var(--color-accent-soft); line-height: 1.5;">
+            Alam menawarkan keindahan yang tak ternilai, mulai dari hutan hijau hingga gunung menjulang tinggi.
+        </p>
+        </div>
+        <div style="flex: 1; padding: 0 10px; text-align: center;">
+        <h3 style="color: var(--color-secondary); margin-bottom: 10px;">Keindahan</h3>
+        <p style="color: var(--color-accent-soft); line-height: 1.5;">
+            Keindahan dunia ini menginspirasi jiwa dan mengingatkan kita untuk menjaga keseimbangan alam.
+        </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" style="padding: 60px 40px; color: var(--color-text-main);">
+    <h2 class="fw-bold" style="text-align: center; margin-bottom: 40px; color: var(--color-text-dark); font-size: 2rem;">
+        Awal Penjelajahan
+    </h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        
+        <video autoplay muted loop style="width: 320px; height: 200px; border-radius: 12px; object-fit: cover;">
+        <source src="https://videos.pexels.com/video-files/30647838/13117068_2560_1440_30fps.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+        </video>
+        
+        <video autoplay muted loop style="width: 320px; height: 200px; border-radius: 12px; object-fit: cover;">
+        <source src="https://videos.pexels.com/video-files/856486/856486-sd_640_360_30fps.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+        </video>
+        
+        <video autoplay muted loop style="width: 320px; height: 200px; border-radius: 12px; object-fit: cover;">
+        <source src="https://videos.pexels.com/video-files/853905/853905-sd_640_360_25fps.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+        </video>       
+    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-white text-center text-lg-start mt-5" style="background-color: var(--color-section-bg);">
+    <div class="container p-4">
+        <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+            <h5 class="text-uppercase" style="color: var(--color-accent-soft);">Traveler's Blog</h5>
+            <p style="color: var(--color-accent-soft);">
+            Bagikan kisah perjalanan, tips, dan inspirasi untuk para pencinta petualangan di seluruh dunia.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase" style="color: var(--color-accent-soft);">Tautan</h5>
+            <ul class="list-unstyled mb-0">
+            <li><a href="#beranda" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Home</a></li>
+            <li><a href="#tentang" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">About</a></li>
+            <li><a href="#top" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Top</a></li>
+            <li><a href="#words" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Words</a></li>
+            <li><a href="#galeri" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Gallery</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase" style="color: var(--color-accent-soft);">Ikuti Saya</h5>
+            <ul class="list-unstyled">
+            <li><a href="#" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Instagram</a></li>
+            <li><a href="#" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">YouTube</a></li>
+            <li><a href="#" class="text-white" style="text-decoration: none; color: var(--color-accent-soft);">Facebook</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: var(--color-divider); color: var(--color-accent-soft);">
+        © 2025 Traveler's Blog. All rights reserved.
+    </div>
+    </footer>
+    
+</body>
+</html>
